@@ -22,7 +22,7 @@ class Post extends Model
     /**
      * category
      *
-     * @return void
+     * 
      */
     public function category()
     {
@@ -32,7 +32,7 @@ class Post extends Model
     /**
      * user
      *
-     * @return void
+     * 
      */
     public function user()
     {
