@@ -41,6 +41,14 @@ Route::prefix('admin')->group(function () {
         //users
         Route::apiResource('/users', App\Http\Controllers\Api\Admin\UserController::class)
         ->middleware('permission:users.index|users.store|users.update|users.delete');
+        
+        //categories all
+        Route::get('/categories/all', [\App\Http\Controllers\Api\Admin\CategoryController::class, 'all'])
+        ->middleware('permission:categories.index');
+
+        //users
+        Route::apiResource('/categories', App\Http\Controllers\Api\Admin\CategoryController::class)
+        ->middleware('permission:categories.index|categories.store|categories.update|categories.delete');
 
     });
 });
