@@ -53,5 +53,9 @@ Route::prefix('admin')->group(function () {
         //Posts
         Route::apiResource('/posts', App\Http\Controllers\Api\Admin\PostController::class)
         ->middleware('permission:posts.index|posts.store|posts.update|posts.delete');
+        
+        //Products
+        Route::apiResource('/products', App\Http\Controllers\Api\Admin\ProductController::class)
+        ->middleware('permission:products.index|products.store|products.update|products.delete');
     });
 });
