@@ -74,3 +74,16 @@ Route::prefix('admin')->group(function () {
             ->middleware('permission:aparaturs.index|aparaturs.store|aparaturs.update|aparaturs.delete');
     });
 });
+
+//group route with prefix "public"
+Route::prefix('public')->group(function () {
+
+    //index posts
+    Route::get('/posts', [App\Http\Controllers\Api\Public\PostController::class, 'index']);
+
+    //show posts
+    Route::get('/posts/{slug}', [App\Http\Controllers\Api\Public\PostController::class, 'show']);
+
+    //index posts home
+    Route::get('/posts_home', [App\Http\Controllers\Api\Public\PostController::class, 'homePage']);
+});
