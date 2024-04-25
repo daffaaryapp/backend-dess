@@ -90,10 +90,10 @@ Route::prefix('public')->group(function () {
     //index products
     Route::get('/products', [App\Http\Controllers\Api\Public\ProductController::class, 'index']);
 
-    //show posts
+    //show page
     Route::get('/products/{slug}', [App\Http\Controllers\Api\Public\ProductController::class, 'show']);
 
-    //index posts home
+    //index products home
     Route::get('/products_home', [App\Http\Controllers\Api\Public\ProductController::class, 'homePage']);
 
     //index pages
@@ -101,4 +101,7 @@ Route::prefix('public')->group(function () {
 
     //show page
     Route::get('/pages/{slug}', [App\Http\Controllers\Api\Public\PageController::class, 'show']);
+
+    //index aparaturs
+    Route::get('/aparaturs', [App\Http\Controllers\Api\Public\AparaturController::class, 'index']);
 });
