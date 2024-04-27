@@ -104,4 +104,10 @@ Route::prefix('public')->group(function () {
 
     //index aparaturs
     Route::get('/aparaturs', [App\Http\Controllers\Api\Public\AparaturController::class, 'index']);
+
+    //index photos
+    Route::get('/photos', [App\Http\Controllers\Api\Public\PhotoController::class, 'index']);
+
+    //index sliders
+    Route::get('/sliders', [App\Http\Controllers\Api\Public\SliderController::class, 'index']);
 });
